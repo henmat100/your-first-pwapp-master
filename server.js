@@ -20,6 +20,7 @@
 
 const express = require('express');
 const fetch = require('node-fetch');
+const compression = require('compression');
 const redirectToHTTPS = require('express-http-to-https').redirectToHTTPS;
 
 // CODELAB: Change this to add a delay (ms) before the server responds.
@@ -182,6 +183,7 @@ function startServer() {
   app.get('/forecast', getForecast);
 
   // Handle requests for static files
+  app.use(compression());
   app.use(express.static('public'));
 
   // Start the server

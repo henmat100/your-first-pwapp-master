@@ -325,7 +325,7 @@ body {
  */
 
 .weather-card {
-  background: #fff;
+  background: rgb(230, 227, 227);
   border-radius: 2px;
   box-shadow:
     0 2px 2px 0 rgba(0, 0, 0, 0.14),
